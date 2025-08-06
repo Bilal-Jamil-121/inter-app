@@ -32,7 +32,7 @@ const Page = () => {
 
   return (
   <>
-  <div className="pt-24 min-h-screen bg-gradient-to-br from-black via-gray-800 to-gray-400 text-white px-4">
+  <div className="pt-24 min-h-screen bg-gradient-to-br from-black via-gray-800 to-gray-400 text-white md:px-4">
     <div className="max-w-3xl mx-auto bg-black/30 backdrop-blur-md p-8 rounded-2xl shadow-lg">
       <img
         src={mealData.strMealThumb}

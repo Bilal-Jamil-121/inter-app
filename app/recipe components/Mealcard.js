@@ -15,12 +15,15 @@ const Mealcard = ({ detail }) => {
               <img className='w-full rounded-md' src={curItem.strMealThumb} alt="img" />
               <p className='text-black mt-5 text-lg font-semibold text-center'>{curItem.strMeal}</p>
               <div>
-                <button
+
+                <Link href={`/Mealinform/${curItem.idMeal}`} > <button
                   onClick={() => setSelectedMeal(curItem)}
                   className="block bg-red-400 px-4 py-2 rounded-2xl mt-4 md:w-auto w-full mx-auto hover:bg-red-600 transition duration-300"
                 >
-                  <Link href={`/Mealinform/${curItem.idMeal}`} >Recipe</Link>
+                  Recipe
                 </button>
+                </Link>
+
               </div>
             </div>
           ))
