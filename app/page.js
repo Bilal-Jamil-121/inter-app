@@ -27,23 +27,23 @@ export default function Home() {
    }
   }
   return (
-    <div className=" py-20 px-5 bg-gradient-to-br min-h-screen from-white to-purple-500">
-      <div className="flex gap-6 bg-gradient-to-tr from-red-500 rounded-4xl to-yellow-400  md:w-1/3 p-6 mx-auto">
+    <div className=" py-20 px-2 md:px-5 bg-gradient-to-br min-h-screen from-white to-purple-500">
+      <div className="flex gap-6 bg-gradient-to-tr from-red-500 rounded-4xl to-yellow-400 p-4  md:w-1/3 md:p-6 mx-auto">
         <input onChange={(e)=>{setsearch(e.target.value)}} className="w-[80%] bg-white py-2 px-3 rounded-2xl text-black" value={search} type="text" placeholder="Enter Dish" />
-        <button  onClick={handleapi} className="bg-orange-700 px-4 rounded-2xl hover:bg-orange-600">Search</button>
+        <button  onClick={handleapi} className="bg-orange-700 px-4 text-white text-sm md:text-lg rounded-2xl hover:bg-orange-600">Search</button>
       </div>
-   
+    {searched&&(
+        <div className="bg-red-400 font-bold rounded text-center mt-5 text-white md:w-1/6 text-2xl py-6 mx-auto">
+            Enter recipe!
+            </div>
+      )}
         <div>
               <Mealcard detail={data}/>
             </div>
    
       
       
-      {searched&&(
-        <div className="bg-red-400 font-bold rounded text-center mt-5 text-white md:w-1/6 text-2xl py-6 mx-auto">
-            Enter recipe!
-            </div>
-      )}
+     
             
     </div>
   );
